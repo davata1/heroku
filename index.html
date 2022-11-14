@@ -1,0 +1,67 @@
+<html>
+    
+    <body>
+        <style>
+    a{
+      text-decoration: none;
+      margin: 20px 30px;
+      color:black;
+    }
+    body{
+      background-image: url("Tamagotchi/awal.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+    label{
+      font-family: sans-serif;
+      font-size: 18px;
+      margin-left: -205px;
+      padding-top: 20px;
+      letter-spacing: 1px;
+    }
+    input{
+      margin-bottom: 10px;
+      margin-left: -18px;
+      width: 280px;
+      height: 23px;
+    }
+
+    .ket{
+      margin-top: -34px;
+      margin-left: 110px;
+      letter-spacing: 0px;
+      font-size: 16px;
+
+      }
+    #box1{
+      background: white;
+      border-radius: 8px;
+      height: 390px;
+      margin: 8rem auto 8.1rem auto;
+      width: 349px;
+      margin-right: 200px;
+      
+    }
+    #box2{
+      padding: 42px 44px;
+
+    }
+    #box3{
+      font-family:sans-serif;
+      letter-spacing: 2px;
+      padding-bottom: 43px;
+      padding-top: 23px;
+      text-align: center;
+    }
+        </style>
+        <form action='/predict' method="POST">
+            Sepal Length: <input type='text' name='sepal_length'><br>
+            Sepal Width: <input type='text' name='sepal_width'><br>
+            Petal Length: <input type='text' name='petal_length'><br>
+            Petal Width: <input type='text' name='petal_width'><br>
+            Class: {{result}} <br>
+            <input type='submit' value='Predict'>
+        </form>
+    </body>
+</html>
